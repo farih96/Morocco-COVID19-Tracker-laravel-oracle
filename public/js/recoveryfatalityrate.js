@@ -43,7 +43,7 @@ function fatality() {
 function recovery(rate) {
 
     const percent = rate;
-    const color = '#50afbc';
+    const color = '#279d07';
     const canvas = 'chartCanvas';
     const container = 'chartContainer';
 
@@ -54,7 +54,7 @@ function recovery(rate) {
     const chartCanvas = document.getElementById(canvas), // Sets canvas element by ID
         chartContainer = document.getElementById(container), // Sets container element ID
         divElement = document.createElement('div'), // Create element to hold and show percentage value in the center on the chart
-        domString = '<div class="chart__value" style="color: #49bf26"><p>' + percentValue + '%</p></div>'; // String holding markup for above created element
+        domString = '<div class="chart__value" style="color: #279d07"><p>' + percentValue + '%</p></div>'; // String holding markup for above created element
 
 // Create a new Chart object
     const doughnutChart = new Chart(chartCanvas, {
