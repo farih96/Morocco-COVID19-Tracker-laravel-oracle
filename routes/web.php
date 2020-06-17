@@ -14,13 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //abe.legros@example.net
-Route::get('/', function () {
+Route::get('/', 'MainController@index');
 
-    $users = User::all();
+Route::get('/{region_id}', 'MainController@regiondetails');
 
-    return view('welcome')->with('users',$users);
 
-});
+
 // admin login route : ******/admin/login
 Route::group(['prefix' => 'admin'], function () {
 

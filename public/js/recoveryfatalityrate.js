@@ -1,6 +1,6 @@
-function fatality() {
+function fatality(rate) {
 
-    const percent = 20;
+    const percent = rate;
     const color = '#c63a12';
     const canvas = 'chartCanvas1';
     const container = 'chartContainer1';
@@ -81,4 +81,29 @@ function recovery(rate) {
 
     divElement.innerHTML = domString; // Parse the HTML set in the domString to the innerHTML of the divElement
     chartContainer.appendChild(divElement.firstChild); // Append the divElement within the chartContainer as it's child
+}
+function citiesChart(names,confirmed,recovered,death) {
+
+    new Chart($("#cities"), {
+        type: 'bar',
+        data: {
+            labels: names,
+            datasets: [
+                {
+                    label: "Confirmed",
+                    backgroundColor: "#db3a5f",
+                    data: confirmed
+                }, {
+                    label: "recovred",
+                    backgroundColor: "#8bde75",
+                    data: recovered
+                }, {
+                    label: "Death",
+                    backgroundColor: "#a6aba5",
+                    data: death
+                }
+            ]
+        }
+    });
+
 }
