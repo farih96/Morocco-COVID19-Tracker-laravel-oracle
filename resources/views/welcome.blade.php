@@ -192,6 +192,9 @@
         <div class="alert alert-danger text-center" role="alert">
             <b>and STAY at home or you be part of this numbers &#128521; </b>
         </div>
+
+
+
         <script src="{{asset('js/recoveryfatalityrate.js')}}"></script>
         <script type="application/javascript">
 
@@ -322,11 +325,12 @@
             $(document).ready(function(){
                 $(".land").click(function () {
                     var id_land = $(this).attr('id');
+
                     cities_name = [];
                     cities_confirmed = [];
                     cities_recovered = [];
                     cities_deaths = [];
-                    $.get("/"+id_land, function(data, status){
+                    $.get("/data/"+id_land, function(data, status){
 
                         // alert("Status: " + status);
                         // data.region_cases['confirmed'] working
@@ -352,7 +356,9 @@
                              creating cities chart
                              */
 
-                        new Chart($("#cities"), {
+
+
+                        var citieschart = new Chart($("#cities"), {
                             type: 'bar',
                             data: {
                                 labels: cities_name,
@@ -374,6 +380,10 @@
                             }
                         });
 
+                        // destroy the old chart to create a new one for a new region
+                        $(".land").click(function () {
+                            citieschart.destroy();
+                        });
 
                     });
 

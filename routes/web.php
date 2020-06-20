@@ -13,18 +13,21 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//abe.legros@example.net
-Route::get('/', 'MainController@index');
 
-Route::get('/{region_id}', 'MainController@regiondetails');
+Route::get('/', 'DataController@index');
+Route::get('/data/{region_id}', 'DataController@regiondetails');
+
+Route::get('/admin', 'AdminController@home');
+Route::get('/addRecord', 'AdminController@addRecord');
+Route::post('/addRecord', 'AdminController@store');
+Route::get('/updateRecord', 'AdminController@list');
+Route::post('update', 'AdminController@update');
 
 
 
-// admin login route : ******/admin/login
 Route::group(['prefix' => 'admin'], function () {
 
     Auth::routes();
 
 });
 
-Route::get('/home', 'HomeController@index')->name('home');

@@ -21,7 +21,7 @@ class CreateCasesTable extends Migration
             $table->date('DAY');
             $table->foreignId('ville_id')->constrained();
             $table->foreignId('region_id')->constrained();
-            $table->timestamps();
+
         });
     }
 

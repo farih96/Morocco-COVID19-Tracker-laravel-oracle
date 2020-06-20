@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\CasesObj;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use PDO;
 
-class MainController extends Controller
+class DataController extends Controller
 {
     protected $pdo;
 
