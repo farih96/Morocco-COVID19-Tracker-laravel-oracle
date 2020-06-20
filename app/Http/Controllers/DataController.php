@@ -20,6 +20,7 @@ class DataController extends Controller
     {
         $total_cases = self::total_cases();
         $last_7days_cases = self::last_7days_cases();
+        $last_7days_cases = array_reverse($last_7days_cases);
         $cases_per_region = self::cases_per_region();
 
       //  dd($last_7days_cases);
