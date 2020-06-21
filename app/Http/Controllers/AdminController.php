@@ -110,16 +110,9 @@ class AdminController extends Controller
         $RECOVERED= $request->input('recovered');
 
 
-
-        $stmt = $this->pdo->prepare("
-                                    UPDATE
-                                        cases
-                                    SET
-                                        CONFIRMED= :c,
-                                        RECOVERED= :r,
-                                        DEATHS= :d
-                                     WHERE
-                                        ID=:id");
+           // calling updatecase procedure from database
+         $stmt = $this->pdo->prepare("begin updatecase(:id, :c, :r, :d); end;");
+        
         $stmt->bindParam(':c', $CONFIRMED);
         $stmt->bindParam(':r', $RECOVERED);
         $stmt->bindParam(':d', $DEATHS);
