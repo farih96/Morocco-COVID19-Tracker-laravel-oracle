@@ -3,6 +3,20 @@
 the app fetch data stored by an admin in an oracle database using yajra/laravel-oci8 package which is an Oracle DB driver for Laravel
 the fetched data s displayed using chartsjs.
 
+you will find all the fucntion , procedure, datatype and tables used in database in `.oracle` folder
+
+### how to setup this repo on your machine
+
+ 1. `git clone THIS REPO URL`
+ 2.  cd into the folder and run `composer install`
+ 3. Install NPM Dependencies  `npm install` or yarn
+ 4. Create a copy of your .env file `cp .env.example .env`,and fill it with 	  your database information,
+ 5. Generate an app encryption key `php artisan key:generate`
+ 6. setup oracel configuration .
+ 7.  run development server `php artisan serve`
+
+ ## Data Source
+all the data in this example is randomly generated with laravel factory 
 
 ## Screenshots
 <img width="70%"   src="https://lh3.googleusercontent.com/tnaRTDAbhiJB_w8uNphaqjA1m27sz-KAQeSc_6s-lkpUHpw6sgnN3SgKeUxyYWUsjZUSIuhA-mc4B0Ndp8ymviHvs6-lURCjbfugNE1nV3D9eBlsZqiM8UUpIb-JpfNun76E6RflVz-FlVQCuMsU-WOVsYODIuZVHjF-5YAoKP7rngA9klzbRFCUX1AcLVtjo6cUsYY73LlhchOeDsfrAni2ukgnm6EmoDEPjoeVQZz7OuqHqn4uNCCsV_GiqPsswfu1X5jONe0wmvxFv1QiZfUBLq0rBQnVudyUX-uW26sML52ZyxL4Mm2MKBaix-cquU8XDmjF7cJPCoy0s3sy_CjYbH_JkriJL5wdjlZjJx-n9_zLKni86VO_zb8og8IchnZThYuPJ2AZ0wtDdoMdRJX8mxhBFMAlVhZimYrObIMbn3dlcs57QXEo1FULNgLUVWMGVl-sVRT0qbZOFi8qcHs8M8PMzp-8hPSKILUlAfaVEv8Y3nfPI45N9_zSsKq-BLkF0enxoKSCz3Ya5T0tXcaet4Joe28zUTvMABbWQxy6msuINtfAeqW9wxDdUilIKfYvTyCVfCdrBDwpLzZIkNqd9R83qBnutgpS7LsLX_sbyuvJMeAq9JNawoPN2neVpJOEmK5p4pD6i-OrtFrym0zoghz29raSB4KhmsDN_vVC5KQB6ukZi_l8Ik_nxPBRsCihYQ=w1366-h625-ft"  alt="">
