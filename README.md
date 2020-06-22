@@ -5,6 +5,7 @@ the fetched data s displayed using chartsjs.
 
 you will find all the fucntion , procedure, datatype and tables used in database in `.oracle` folder
 
+
 ### how to setup this repo on your machine
 
  1. `git clone THIS REPO URL`
